@@ -5,13 +5,15 @@ const axiosInstance = axios.create({
   baseURL: `${BASE_URL}`,
   headers: {
     'app-id': `${APP_ID}`,
+    'Content-Type': 'application/json',
   },
 });
 
-const getAllPosts = async () => {
+const getAllPosts = async (pageIndex: number) => {
   return axiosInstance
-    .get('/')
+    .get(`/post?page=${pageIndex}&limit=50`)
     .then((response) => {
+      console.log(response);
       return response.data;
     })
     .catch((error) => console.log(error));

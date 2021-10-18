@@ -11,13 +11,13 @@ interface IGetAllPosts {
   payload: any;
 }
 
-const getPosts = () => (dispatch: Dispatch<IGetAllPosts>) => {
-  getAllPosts().then((response: any) =>
-    dispatch({
+const getPosts = (pageNumber: number) => (dispatch: Dispatch<IGetAllPosts>) => {
+  getAllPosts(pageNumber).then((response: any) => {
+    return dispatch({
       type: GET_ALL_POSTS,
-      payload: response,
-    })
-  );
+      payload: response.data,
+    });
+  });
 };
 
 export { getPosts };
