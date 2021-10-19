@@ -1,0 +1,11 @@
+.main_page__wrapper {
+  height: 100%;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  padding-right: 10px;
+  padding-left: 10px;
+  overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

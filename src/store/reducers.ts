@@ -1,5 +1,5 @@
 import { GET_ALL_POSTS } from './actionTypes';
-import { IPost } from '../types';
+import { IPost } from '../util/types';
 
 const initalState = {
   posts: [] as IPost[],

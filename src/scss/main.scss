@@ -1,2 +1,9 @@
 @import './variables.scss';
 @import '../App.scss';
+
+//Pages
+@import '../pages/MainPage/MainPage.scss';
+@import '../pages/PostPage/PostPage.scss';
+
+//Components
+@import '../components//Post/Post.scss';
