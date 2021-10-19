@@ -10,13 +10,17 @@ import { Provider } from 'react-redux';
 import ReduxThunk from 'redux-thunk';
 import logger from 'redux-logger';
 
+import { BrowserRouter as Router } from 'react-router-dom';
+
 const middleware = applyMiddleware(ReduxThunk, logger);
 const store = createStore(reducer, middleware);
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <Router>
+        <App />
+      </Router>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Switch, Route } from 'react-router-dom';
 
 import { getPosts } from './store/actions';
 import { RootState } from './store/reducers';
-import './App.css';
+import './scss/main.scss';
 
 function App() {
   const dispatch = useDispatch();
