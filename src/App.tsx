@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route path={RoutesLinkEnum.POST} component={PostPage} />
+        <Route path="/:id" component={PostPage} />
         <Route path={RoutesLinkEnum.MAIN} component={MainPage} />
       </Switch>
     </div>

@@ -19,4 +19,9 @@ const getAllPosts = async (pageIndex: number) => {
     .catch((error) => console.log(error));
 };
 
-export { getAllPosts };
+const getPost = async (id: string) => {
+  return axiosInstance.get(`./post/${id}`).then((response) => {
+    return response.data;
+  });
+};
+export { getAllPosts, getPost };

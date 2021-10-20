@@ -3,12 +3,20 @@ import { IPost } from '../util/types';
 
 const initalState = {
   posts: [] as IPost[],
+  fullPost: {} as IPost,
 };
 
-type Action = {
+type ActionGetAllPosts = {
   type: 'GET_ALL_POSTS';
   payload: IPost[];
 };
+
+type ActionGetPost = {
+  type: 'GET_POST';
+  payload: IPost;
+};
+
+type Action = ActionGetAllPosts | ActionGetPost;
 
 export type RootState = ReturnType<typeof reducer>;
 

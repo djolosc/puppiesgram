@@ -14,4 +14,5 @@ export interface IPost {
   text: string;
   owner: IOwner;
   tags: string[];
+  link?: string;
 }
