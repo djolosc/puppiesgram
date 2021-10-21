@@ -28,7 +28,7 @@ const Post: FunctionComponent<PostProps> = ({ post }) => {
           <p className="description_short__text">{descriptionPharagraph}</p>
         </div>
 
-        <p className="date__text">published on {formatedDate}</p>
+        <p className="date__text">{formatedDate}</p>
       </div>
     </button>
   );

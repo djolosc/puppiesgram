@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,wBAAwB,CAAC;EACvB,OAAO,EAAE,IAAI;EACb,UAAU,EAAE,IAAI;EAChB,aAAa,EAAE,IAAI;EACnB,eAAe,EAAE,aAAa;CAY/B;;AAhBD,AAME,wBANsB,CAMtB,aAAa,CAAC;EACZ,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,SAAS;CACvB;;AATH,AAWE,wBAXsB,CAWtB,SAAS,CAAC;EACR,YAAY,EAAE,IAAI;EAClB,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;CACZ",
+    "sources": [
+        "../../src/components/headers/MainPageHeader/MainPageHeader.scss"
+    ],
+    "names": [],
+    "file": "MainPageHeader.css"
+}

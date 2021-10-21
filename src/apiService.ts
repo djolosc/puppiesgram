@@ -20,8 +20,11 @@ const getAllPosts = async (pageIndex: number) => {
 };
 
 const getPost = async (id: string) => {
-  return axiosInstance.get(`./post/${id}`).then((response) => {
-    return response.data;
-  });
+  return axiosInstance
+    .get(`./post/${id}`)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => console.log(error));
 };
 export { getAllPosts, getPost };

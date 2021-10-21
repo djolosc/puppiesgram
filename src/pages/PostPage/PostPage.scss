@@ -7,12 +7,10 @@
   align-items: center;
 
   .header {
-    height: 150px;
+    margin: 20px 5vw 50px 5vw;
     align-self: flex-start;
 
     button {
-      margin-left: 5vw;
-      margin-top: 50px;
       border: none;
       background-color: $transparent;
       transition: all 0.4s ease-in-out;

@@ -1,0 +1,64 @@
+.create_page__wrapper {
+  height: 100%;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+
+  .header__wrapper {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+
+    button {
+      border: none;
+      background-color: $transparent;
+      transition: all 0.4s ease-in-out;
+
+      img {
+        width: 50px;
+        height: auto;
+      }
+    }
+
+    button:hover {
+      transform: scale(1.2);
+      cursor: pointer;
+      transition: ease;
+    }
+
+    button:active {
+      transform: scale(1.1);
+    }
+
+    .header__text {
+      font-size: 40px;
+      font-family: monospace;
+    }
+  }
+
+  .inputs__wrapper {
+    padding-left: 5vw;
+
+    .save__button {
+      width: 610px;
+      height: 100px;
+      font-size: 40px;
+      border: none;
+      border-radius: 20px;
+      background-color: $blue;
+      color: $white;
+    }
+
+    .save__button:hover {
+      cursor: pointer;
+    }
+
+    .save__button:active {
+      transform: scale(0.98);
+    }
+  }
+}

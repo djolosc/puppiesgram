@@ -1,0 +1,77 @@
+.create_page__wrapper {
+  height: 100%;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.create_page__wrapper .header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.create_page__wrapper .header__wrapper button {
+  border: none;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.create_page__wrapper .header__wrapper button img {
+  width: 50px;
+  height: auto;
+}
+
+.create_page__wrapper .header__wrapper button:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  cursor: pointer;
+  -webkit-transition: ease;
+  transition: ease;
+}
+
+.create_page__wrapper .header__wrapper button:active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.create_page__wrapper .header__wrapper .header__text {
+  font-size: 40px;
+  font-family: monospace;
+}
+
+.create_page__wrapper .inputs__wrapper {
+  padding-left: 5vw;
+}
+
+.create_page__wrapper .inputs__wrapper .save__button {
+  width: 610px;
+  height: 100px;
+  font-size: 40px;
+  border: none;
+  border-radius: 20px;
+  background-color: red;
+}
+
+.create_page__wrapper .inputs__wrapper .save__button:hover {
+  cursor: pointer;
+}
+
+.create_page__wrapper .inputs__wrapper .save__button:acrive {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+/*# sourceMappingURL=CreatePage.css.map */

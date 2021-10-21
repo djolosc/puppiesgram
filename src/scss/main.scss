@@ -4,7 +4,14 @@
 //Pages
 @import '../pages/MainPage/MainPage.scss';
 @import '../pages/PostPage/PostPage.scss';
+@import '../pages/EditPage/EditPage.scss';
+@import '../pages/CreatePage/CreatePage.scss';
 
 //Components
 @import '../components//Post/Post.scss';
+@import '../components/headers/MainPageHeader/MainPageHeader.scss';
+@import '../components/inputs/PostInput/PostInput.scss';
+
+//Modals
 @import '../components/modals/FormModal/FormModal.scss';
+@import '../components/modals/ActivityIndicatorModal/ActivityIndicatorModal.scss';

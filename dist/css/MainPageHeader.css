@@ -1,0 +1,22 @@
+.mainPageHeader__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mainPageHeader__wrapper .header__text {
+  font-size: 40px;
+  font-family: monospace;
+}
+
+.mainPageHeader__wrapper .plus_img {
+  margin-right: 10px;
+  height: 50px;
+  width: 50px;
+}
+/*# sourceMappingURL=MainPageHeader.css.map */

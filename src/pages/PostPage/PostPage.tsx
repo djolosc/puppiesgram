@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { RouteComponentProps, useHistory } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
 
-import { FormModal } from '../../components';
+import { FormModal, ActivityIndicatorModal } from '../../components';
 
 import { getPost } from '../../apiService';
 import { formatPostContent } from '../../util/functions';
@@ -15,7 +14,8 @@ import { IPost } from '../../util/types';
 
 const PostPage = ({ match }: RouteComponentProps<{ id: string }>) => {
   const [post, setPost] = useState({} as IPost);
-  const [isFormModalOpen, setIsFormModalOpen] = useState(true);
+  const [isFormModalOpen, setIsFormModalOpen] = useState(false);
+  const [isActivityModalOpen, setIsActivityModalOpen] = useState(false);
 
   const history = useHistory();
 
@@ -33,8 +33,10 @@ const PostPage = ({ match }: RouteComponentProps<{ id: string }>) => {
     formatPostContent(post);
 
   useEffect(() => {
+    setIsActivityModalOpen(true);
     getPost(postId).then((response: any) => {
       setPost(response);
+      setIsActivityModalOpen(false);
     });
   }, []);
 
@@ -69,12 +71,14 @@ const PostPage = ({ match }: RouteComponentProps<{ id: string }>) => {
             ) : null}
           </div>
           <p className="description__text">{descriptionPharagraph}</p>
-          <img
-            src={plusImg}
-            alt="plus_button"
-            className="plus_img"
-            onClick={onPlusButtonClick}
-          />
+          {post.id ? (
+            <img
+              src={plusImg}
+              alt="plus_button"
+              className="plus_img"
+              onClick={onPlusButtonClick}
+            />
+          ) : null}
         </div>
         <div className="img__wrapper">
           {post.image ? (
@@ -82,7 +86,7 @@ const PostPage = ({ match }: RouteComponentProps<{ id: string }>) => {
           ) : null}
           <div className="img__footer">
             <p className="likes__text">{likesText}</p>
-            <p className="date__text">Published on {formatedDate}</p>
+            <p className="date__text">{formatedDate}</p>
           </div>
         </div>
       </div>
@@ -91,6 +95,9 @@ const PostPage = ({ match }: RouteComponentProps<{ id: string }>) => {
         setIsOpen={setIsFormModalOpen}
         post={post}
         setPost={setPost}
+      />
+      <ActivityIndicatorModal
+        showActivityIndicatorModal={isActivityModalOpen}
       />
     </div>
   );

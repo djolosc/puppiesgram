@@ -1,13 +1,16 @@
 import { Dispatch } from 'react';
 import { getAllPosts } from '../apiService';
-import { GET_ALL_POSTS } from './actionTypes';
+import { GET_ALL_POSTS, ADD_POST } from './actionTypes';
 
-interface IActions {
-  GET_ALL_POSTS: string;
-}
+import { IPost } from '../util/types';
 
 interface IGetAllPosts {
-  type: IActions['GET_ALL_POSTS'];
+  type: typeof GET_ALL_POSTS;
+  payload: any;
+}
+
+interface IAddPost {
+  type: typeof ADD_POST;
   payload: any;
 }
 
@@ -20,4 +23,11 @@ const getPosts = (pageNumber: number) => (dispatch: Dispatch<IGetAllPosts>) => {
   });
 };
 
-export { getPosts };
+const addPost = (post: IPost) => (dispatch: Dispatch<IAddPost>) => {
+  return dispatch({
+    type: ADD_POST,
+    payload: post,
+  });
+};
+
+export { getPosts, addPost };

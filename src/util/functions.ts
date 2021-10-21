@@ -15,7 +15,8 @@ export const formatPostContent = (post: IPost) => {
       '';
     const tags = post.tags.map((tag) => `#${tag}`).join(' ') || '';
     content.descriptionPharagraph = `${post.text} ${tags}` || '';
-    content.formatedDate = moment(post.publishDate).format('MMM Do YYYY') || '';
+    content.formatedDate =
+      `Published on ${moment(post.publishDate).format('MMM Do YYYY')}` || '';
 
     const generateLikesText = () => {
       if (!post.likes) return 'Liked by no one, yet';

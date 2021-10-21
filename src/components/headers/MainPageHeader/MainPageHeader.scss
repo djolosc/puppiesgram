@@ -1,0 +1,17 @@
+.mainPageHeader__wrapper {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+
+  .header__text {
+    font-size: 40px;
+    font-family: monospace;
+  }
+
+  .plus_img {
+    margin-right: 10px;
+    height: 50px;
+    width: 50px;
+  }
+}

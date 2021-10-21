@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACE,eADa,CACb,CAAC,CAAC;EACA,WAAW,EAAE,SAAS;EACtB,SAAS,EAAE,IAAI;CAChB;;AAJH,AAME,eANa,CAMb,KAAK,CAAC;EACJ,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,SAAS,EAAE,IAAI;CAChB",
+    "sources": [
+        "../../src/components/inputs/PostInput/PostInput.scss"
+    ],
+    "names": [],
+    "file": "PostInput.css"
+}
