@@ -1,0 +1,57 @@
+.form_modal__wrapper {
+  position: fixed;
+  top: 20%;
+  bottom: 50%;
+  left: 34%;
+  width: 460px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  outline: 0px;
+
+  .modal_input {
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+    resize: none;
+    border: none;
+    background-color: $lightGrey;
+  }
+
+  .modal_button {
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    align-self: center;
+    margin-top: 20px;
+  }
+
+  .modal_button:hover {
+    cursor: pointer;
+  }
+
+  .modal_button:active {
+    transform: scale(0.98);
+  }
+
+  .modal_input:focus {
+    outline: none;
+  }
+}
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(11, 10, 30, 0.8);
+}

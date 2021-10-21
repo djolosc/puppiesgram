@@ -1,6 +1,6 @@
 .post_page__wrapper {
   width: 100%;
-  height: 100%;
+  // height: 100%;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -39,9 +39,20 @@
       .profile__wrapper {
         display: flex;
         align-items: center;
+        justify-content: space-between;
 
-        .profile_pic {
-          border-radius: 12px;
+        .profile__img_name {
+          display: flex;
+          .profile_pic {
+            border-radius: 12px;
+          }
+        }
+
+        a {
+          .instagram_img {
+            width: 50px;
+            height: 50px;
+          }
         }
 
         .fullName__text {
@@ -56,6 +67,12 @@
         margin-top: 20px;
         font-size: 30px;
       }
+
+      .plus_img {
+        margin-top: 10px;
+        width: 30px;
+        height: 30px;
+      }
     }
 
     .img__wrapper {
@@ -64,6 +81,7 @@
       flex-direction: column;
 
       .picture {
+        box-shadow: $postBorderShadow;
         height: auto;
         object-fit: cover;
         border-radius: 12px;
@@ -76,8 +94,10 @@
 
         .likes__text {
           align-self: flex-start;
+          color: $dateColor;
         }
         .date__text {
+          color: $dateColor;
         }
       }
     }
@@ -92,4 +112,15 @@
 
 .header button:active {
   transform: scale(1.1);
+}
+
+a .instagram_img:hover {
+  cursor: pointer;
+}
+.plus_img:hover {
+  cursor: pointer;
+}
+
+.plus_img:active {
+  transform: scale(0.95);
 }
