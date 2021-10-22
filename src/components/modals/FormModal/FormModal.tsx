@@ -1,8 +1,6 @@
 import React, { FC, useState } from 'react';
 import Modal from 'react-modal';
 
-import removeButton from '../../../assets/images/removeButton.png';
-
 import { IPost } from '../../../util/types';
 
 interface FormModalProps {
@@ -18,8 +16,6 @@ const FormModal: FC<FormModalProps> = ({
   setIsOpen,
   setPost,
 }) => {
-  // const [value, setValue] = useState(comment);
-
   const handleInput = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setPost({ ...post, text: e.target.value });
   };

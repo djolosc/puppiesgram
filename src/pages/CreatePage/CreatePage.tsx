@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import { PostInput } from '../../components';
 import { addPost } from '../../store/actions';
@@ -59,7 +59,9 @@ const CreatePage = () => {
     const data = { ...newPost };
     data.owner = owner;
     const formatedData = formatData(data);
+    console.log(formatedData);
     dispatch(addPost(formatedData));
+    history.goBack();
   };
 
   return (
@@ -89,7 +91,7 @@ const CreatePage = () => {
         <PostInput
           label="Image URL"
           value={newPost.image}
-          onChange={(e) => handleInputChange('text', e)}
+          onChange={(e) => handleInputChange('image', e)}
         />
         <button className="save__button" onClick={onSubmitClick}>
           Save

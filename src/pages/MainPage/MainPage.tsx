@@ -34,9 +34,9 @@ const MainPage = () => {
   }, [pageIndex]);
 
   return (
-    <div className="main_page__wrapper" onScroll={handleScroll}>
+    <div className="main_page__wrapper">
       <MainPageHeader onButtonClick={onButtonClick} />
-      <div className="posts_wrapper">
+      <div className="posts_wrapper" onScroll={handleScroll}>
         {posts.length
           ? posts.map((post, index) => <Post key={index} post={post} />)
           : null}
